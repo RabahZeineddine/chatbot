@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { login } from '../../actions/usersAction'
+import style from './style'
 
 import {
     Grid,
@@ -13,43 +14,18 @@ import {
     CircularProgress
 } from '@material-ui/core'
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        minHeight: '100vh'
-    },
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-    },
-    textField: {
-        width: '90%',
-    },
-    loginBtn: {
-        marginTop: '32px',
-        marginBottom: '8px',
-        width: '90%'
-    },
-    error: {
-        minHeight: '18px',
-        color: '#F00',
-        textAlign: 'center'
-    }
-})
 
 class Login extends Component {
 
     state = {
         username: {
             error: false,
-            value: ' '
+            value: ''
         },
         password: {
             error: false,
             value: ''
-        },
-        loading: false
+        }
     }
 
     handleInputChange = key => event => {
@@ -65,20 +41,19 @@ class Login extends Component {
     handleSubmit = event => {
 
         event.preventDefault()
-        this.setState({ loading: true })
         const username = this.state.username.value
         const password = this.state.password.value
         const user = { username, password }
 
         this.props.login(user)
-            .then(() => { this.props.history.push('/') })
-
-        setTimeout(() => { this.setState({ loading: false }) }, 1000)
-
+            .then(() => {
+                this.props.history.push('/')
+            })
     }
 
     render() {
         const { classes, user } = this.props
+        const { isLogging } = user
         return (
             <Grid container alignItems="center" justify="center" className={classes.root}>
                 <Grid item xs={10} sm={6} lg={4} >
@@ -105,7 +80,7 @@ class Login extends Component {
                                     onChange={this.handleInputChange('password')}
                                 />
                                 <Button variant="contained" color="primary" type="submit" className={classes.loginBtn}>
-                                    {!this.state.loading ? 'Login'
+                                    {!isLogging ? 'Login'
                                         : <CircularProgress color="inherit" size={24} />
                                     }
                                 </Button>
@@ -133,4 +108,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(withStyles(styles)(Login))
+)(withStyles(style)(Login))

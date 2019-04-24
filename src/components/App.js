@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
 import Login from './Login'
-import Chatbot from './Chatbot'
+import Home from './Home'
 import NotFound from './NotFound'
 import 'typeface-roboto';
 
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Switch>
         <PublicRoute exact path="/login" component={Login} />
-        <PrivateRoute exact path="/" component={Chatbot} />
+        <PrivateRoute exact path="/" component={Home} />
         <Route component={NotFound} />
       </Switch>
     );
