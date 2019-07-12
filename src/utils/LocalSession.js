@@ -1,5 +1,6 @@
 
 export const setSession = (name, value) => {
+    console.log(value)
     if (typeof (Storage) !== "undefined") {
         sessionStorage.setItem(name, JSON.stringify(value));
     }
@@ -20,7 +21,9 @@ const setCookie = (cname, cvalue) => {
 export const getSession = (name) => {
     if (typeof (Storage) !== "undefined") {
         // Code for localStorage/sessionStorage.
-        return JSON.parse(sessionStorage.getItem(name));
+        let object = sessionStorage.getItem(name)
+        if (object != null && object !== undefined && object !== 'undefined') return JSON.parse(sessionStorage.getItem(name))
+        return null
     }
     else {
         // Sorry! No Web Storage support.. use cookie instead..

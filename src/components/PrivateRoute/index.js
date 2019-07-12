@@ -8,7 +8,7 @@ function PrivateRoute({ component: Component, ...rest }) {
     return <Route
         {...rest}
         render={props =>
-            rest.user.isLogged ? (
+            !rest.user.isLogged ? (
                 <Component {...props} />
             )
                 : (

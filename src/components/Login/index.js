@@ -58,7 +58,7 @@ class Login extends Component {
             <Grid container alignItems="center" justify="center" className={classes.root}>
                 <Grid item xs={10} sm={6} lg={4} >
                     <Card>
-                        <CardHeader title="Login Form" />
+                        <CardHeader title="Login" />
                         <CardContent>
                             <div className={classes.error}>{user.loggingError ? user.error.detail : ' '}</div>
                             < form noValidate autoComplete="off" className={classes.container} onSubmit={this.handleSubmit}>

@@ -1,7 +1,7 @@
 export default theme => ({
     root: {
         flexGrow: 1,
-        height: '100vh'
+        height: '100vh',
     },
     container: {
         display: 'flex',
