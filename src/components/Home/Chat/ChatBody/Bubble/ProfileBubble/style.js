@@ -19,6 +19,7 @@ export default theme => ({
         marginLeft: 15
     },
     time: {
-        fontSize: 10
+        fontSize: 10,
+        color: "#fff"
     }
 })

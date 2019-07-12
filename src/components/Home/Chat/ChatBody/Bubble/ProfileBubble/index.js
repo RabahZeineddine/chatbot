@@ -4,8 +4,10 @@ import {
     withStyles
 } from '@material-ui/core'
 
-import botImage from '../../../../../../../assets/images/bot.png'
-import userImage from '../../../../../../../assets/images/user.png'
+
+
+import botImage from '../../../../../../assets/images/bot.png'
+import manUser from '../../../../../../assets/images/man-user.png'
 
 class ProfileBubble extends Component {
 
@@ -15,7 +17,7 @@ class ProfileBubble extends Component {
 
         return (
             <div className={`${classes.holder} ${classes[message.user]}`}>
-                <img className={classes.icon} src={message.user === 'client' ? userImage : botImage} alt="Profile" />
+                <img className={classes.icon} src={message.user === 'client' ? manUser : botImage} alt="Profile" />
                 <span className={classes.time}>{this.getTime()}</span>
             </div>
         )
@@ -23,9 +25,9 @@ class ProfileBubble extends Component {
 
     getTime() {
         const timestamp = this.props.message.date
-        if(timestamp){
+        if (timestamp) {
             let date = new Date(timestamp)
-            return `${date.getHours()}:${date.getMinutes()}`
+            return `${date.getHours()}:${ date.getMinutes()<10?'0':''}${date.getMinutes()}`
         }
         return ``
 
