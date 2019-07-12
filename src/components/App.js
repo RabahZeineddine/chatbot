@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <PublicRoute exact path="/login" component={Login} />
+        {/* <PublicRoute exact path="/login" component={Login} /> */}
         <PrivateRoute exact path="/" component={Home} />
         <Route component={NotFound} />
       </Switch>
