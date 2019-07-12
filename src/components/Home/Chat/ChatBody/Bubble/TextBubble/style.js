@@ -12,13 +12,15 @@ export default theme => ({
         color: '#fff',
         textAlign: 'left',
         borderTopRightRadius: 5,
-        borderBottomRightRadius: 5
+        borderBottomRightRadius: 5,
+        borderBottomLeftRadius: 5,
     },
     clientBubble: {
         marginRight: 5,
         backgroundColor: '#fff',
         textAlign: 'left',
         borderTopLeftRadius: 5,
-        borderBottomLeftRadius: 5
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5
     }
 })

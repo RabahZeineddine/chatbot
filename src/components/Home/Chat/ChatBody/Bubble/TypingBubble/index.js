@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import style from './style'
 import { withStyles } from '@material-ui/core'
-import typingGif from '../../../../../../../assets/images/typing.svg'
+import typingGif from '../../../../../../assets/images/typing.svg'
 
 class TypingBubble extends Component {
 
