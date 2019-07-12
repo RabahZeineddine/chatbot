@@ -30,10 +30,13 @@ export const sendMessage = (message) => dispatch => {
     dispatch(sendMessageRequest(message))
     return MessagesAPI
         .send(message)
-        .then(receivedMessages => {
+        .then(results => {
+            console.log(results)
             let sessionMessages = LocalSession.getSession('messages') || []
-            LocalSession.setSession('messages', sessionMessages.concat([message], receivedMessages))
-            return dispatch(sendMessageSuccess(receivedMessages))
+            LocalSession.setSession('messages', sessionMessages.concat([message], results.messages))
+            LocalSession.setSession('session_id', results.session_id)
+            LocalSession.setSession('context', results.context)
+            return dispatch(sendMessageSuccess(results.messages))
         })
         .catch(error => dispatch(sendMessageFailure(error)))
 }
