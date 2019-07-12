@@ -9,7 +9,7 @@ class Header extends Component {
         const { classes } = this.props
 
         return (
-            <div className={classes.header}> Gera </div>
+            <div className={classes.header}> Chat </div>
         )
     }
 }

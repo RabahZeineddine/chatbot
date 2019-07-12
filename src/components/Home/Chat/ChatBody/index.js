@@ -6,10 +6,10 @@ import {
 import style from './style'
 import Bubble from './Bubble'
 import { connect } from 'react-redux'
-import { sendMessage } from '../../../../../actions/messagesAction';
+import { sendMessage } from '../../../../actions/messagesAction';
 
 
-class ChatTab extends Component {
+class ChatBody extends Component {
 
     constructor(props) {
         super(props)
@@ -76,7 +76,10 @@ class ChatTab extends Component {
                     <form noValidate autoComplete="off" className={classes.footerHolder} onSubmit={this.handleSubmit} >
                         <TextField
                             id="input"
-                            className={classes.inputTextField}
+                            className={classes.inputHolder}
+                            inputProps={{
+                                className: classes.inputTextField
+                            }}
                             value={this.state.inputValue}
                             margin="normal"
                             placeholder="Type a message"
@@ -109,4 +112,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(withStyles(style)(ChatTab))
+)(withStyles(style)(ChatBody))

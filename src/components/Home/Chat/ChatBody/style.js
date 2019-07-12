@@ -3,7 +3,8 @@ export default theme => ({
         display: 'flex',
         flexDirection: 'column',
         overflowY: 'hidden',
-        height: '100%'
+        height: '100%',
+        borderLeft: '1px solid #141E30'
     },
     messagesHolder: {
         display: 'flex',
@@ -17,8 +18,12 @@ export default theme => ({
     footerHolder: {
         display: 'flex'
     },
-    inputTextField: {
+    inputHolder: {
         flexGrow: 1,
-        paddingLeft: 2
+        
+    },
+    inputTextField: {
+        paddingLeft: 5,
+        color: 'white'
     }
 })

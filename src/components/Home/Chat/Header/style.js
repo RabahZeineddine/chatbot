@@ -8,6 +8,7 @@ export default theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexShrink: 0,
-        fontSize: 22
+        fontSize: 22,
+        borderTopLeftRadius: 6
     }
 })
