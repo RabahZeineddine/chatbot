@@ -5,6 +5,7 @@ import {
 } from '@material-ui/core'
 import TextBubble from './TextBubble'
 import TypingBubble from './TypingBubble'
+import ListBubble from './ListBubble'
 import styles from './style'
 import ProfileBubble from './ProfileBubble'
 
@@ -31,6 +32,8 @@ class Bubble extends Component {
         switch (message.type) {
             case 'text':
                 return <TextBubble message={message} />
+            case 'list':
+                    return <ListBubble message={message} />
             case 'typing':
                 return <TypingBubble />
             default:
