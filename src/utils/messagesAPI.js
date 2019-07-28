@@ -4,6 +4,7 @@ import { getSession } from './LocalSession';
 
 
 export const send = async (message) => {
+    console.log(env)
     let params = {}
     let session_id = ''
     let context = {}
