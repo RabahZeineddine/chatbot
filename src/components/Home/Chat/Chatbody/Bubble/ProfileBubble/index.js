@@ -4,8 +4,8 @@ import {
     withStyles
 } from '@material-ui/core'
 
-import botImage from '../../../../../../../assets/images/bot.png'
-import userImage from '../../../../../../../assets/images/user.png'
+import botImage from '../../../../../../assets/images/bot.png'
+import userImage from '../../../../../../assets/images/user.png'
 
 class ProfileBubble extends Component {
 

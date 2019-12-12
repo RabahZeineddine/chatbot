@@ -6,7 +6,8 @@ import {
 import style from './style'
 import Bubble from './Bubble'
 import { connect } from 'react-redux'
-import { sendMessage } from '../../../../../actions/messagesAction';
+import { sendMessage } from '../../../../actions/messagesAction'
+
 
 
 class ChatTab extends Component {

@@ -3,7 +3,8 @@ import { withStyles } from '@material-ui/core'
 
 import style from './style'
 import Header from './Header';
-import TabsComponent from './TabsComponent'
+import Chatbody from './Chatbody';
+
 
 class Chat extends Component {
 
@@ -14,7 +15,7 @@ class Chat extends Component {
         return (
             <div className={classes.holder}>
                 <Header />
-                <TabsComponent />
+                <Chatbody />
             </div>
         )
     }

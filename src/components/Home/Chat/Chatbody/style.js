@@ -3,7 +3,10 @@ export default theme => ({
         display: 'flex',
         flexDirection: 'column',
         overflowY: 'hidden',
-        height: '100%'
+        height: '100%',
+        borderLeft: '1px solid #fff',
+        width: '100%',
+        flex: '1 0'
     },
     messagesHolder: {
         display: 'flex',
