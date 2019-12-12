@@ -1,11 +1,12 @@
 
 export const setSession = (name, value) => {
-    if (typeof (Storage) !== "undefined") {
-        sessionStorage.setItem(name, JSON.stringify(value));
-    }
-    else {
-        setCookie(name, JSON.stringify(value));
-    }
+    if (value)
+        if (typeof (Storage) !== "undefined") {
+            sessionStorage.setItem(name, JSON.stringify(value));
+        }
+        else {
+            setCookie(name, JSON.stringify(value));
+        }
 }
 
 
