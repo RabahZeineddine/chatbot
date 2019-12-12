@@ -5,7 +5,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
 import { createStore, applyMiddleware, compose } from 'redux';
-import { MuiThemeProvider } from '@material-ui/core'
+import { ThemeProvider } from '@material-ui/core'
 import { theme } from './config'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
@@ -23,9 +23,9 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <MuiThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
                 <App />
-            </MuiThemeProvider>
+            </ThemeProvider>
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

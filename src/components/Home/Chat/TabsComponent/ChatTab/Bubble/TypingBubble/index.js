@@ -11,7 +11,7 @@ class TypingBubble extends Component {
 
         return (
             <div className={classes.bubble}>
-                <img src={typingGif} alt='typing image' className={classes.typingImg} />
+                <img src={typingGif} alt='typing' className={classes.typingImg} />
             </div>
         )
     }

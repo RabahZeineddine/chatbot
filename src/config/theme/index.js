@@ -3,13 +3,16 @@ import {
 } from '@material-ui/core'
 
 import {
-    blue, white
+    blue
 } from '@material-ui/core/colors'
+import { white } from './colors'
 
 export default createMuiTheme({
     palette: {
         primary: blue,
-        secondary: white
+        secondary: {
+            main: white
+        }
     }, typography: {
         useNextVariants: true,
     }
