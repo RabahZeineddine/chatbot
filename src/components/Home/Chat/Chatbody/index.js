@@ -10,7 +10,7 @@ import { sendMessage } from '../../../../actions/messagesAction'
 
 
 
-class ChatTab extends Component {
+class ChatBody extends Component {
 
     constructor(props) {
         super(props)
@@ -110,4 +110,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(withStyles(style)(ChatTab))
+)(withStyles(style)(ChatBody))

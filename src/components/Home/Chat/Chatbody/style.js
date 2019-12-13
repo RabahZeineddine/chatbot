@@ -6,16 +6,21 @@ export default theme => ({
         height: '100%',
         borderLeft: '1px solid #fff',
         width: '100%',
-        flex: '1 0'
+        flexGrow: 1,
+        flexShrink: 0,
+        flexBasis: 0
     },
     messagesHolder: {
         display: 'flex',
         flexDirection: 'column',
         overflowY: 'scroll',
         width: '100%',
-        flex: '1 0'
+        flexGrow: 1,
+        flexShrink: 0,
+        flexBasis: 0
     },
     footer: {
+        flexShrink: 0
     },
     footerHolder: {
         display: 'flex'
